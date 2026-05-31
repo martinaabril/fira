@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    color:white;
+}
+
+/* Fondo animado */
+.fons{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+        -45deg,
+        #ff006e,
+        #8338ec,
+        #3a86ff,
+        #06d6a0
+    );
+    background-size:400% 400%;
+    animation:fonsAnimat 10s ease infinite;
+    z-index:-1;
+}
+
+@keyframes fonsAnimat{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Botón principal */
+.boto-gran{
+    font-size:4rem;
+    font-weight:bold;
+    padding:40px 80px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(45deg,#ffbe0b,#fb5607);
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+    animation:batec 1.5s infinite;
+    transition:.3s;
+}
+
+.boto-gran:hover{
+    transform:scale(1.15);
+}
+
+@keyframes batec{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+.boto-secundari{
+    margin-top:30px;
+    padding:15px 30px;
+    font-size:1.2rem;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+/* Popup */
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    color:black;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    animation:apareixer .4s ease;
+}
+
+.boto-popup{
+    margin-top:15px;
+    padding:12px 24px;
+    font-size:1rem;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.raons{
+    margin-top:20px;
+    text-align:left;
+    background:#f5f5f5;
+    padding:15px;
+    border-radius:10px;
+}
+
+.raons ul{
+    margin-left:20px;
+}
+
+@keyframes apareixer{
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+#tancar{
+    margin-top:20px;
+    padding:10px 20px;
+}
+
+.raons{
+    position:fixed;
+    bottom:30px;
+    background:rgba(255,255,255,.9);
+    color:black;
+    padding:20px;
+    border-radius:15px;
+}
+
+.amagada{
+    display:none;
+}
